@@ -61,6 +61,7 @@ function initialQuiz() {
 	"If you do not finish before the timer runs out, your score will be zero.";
 	quizFormat.style.marginTop = "20px";
 	quizFormat.style.marginBottom = "20px";
+
 	startBtn.style.display = "visible";
 
 	// Retrieve high scores from local storage
@@ -175,7 +176,7 @@ function checkAnswer(event) {
 			feedbackText.style.fontWeight = "bold";
 		}
 		else {
-			feedbackText.textContent = "Incorrect (–10 seconds)";
+			feedbackText.textContent = "Incorrect (-10 seconds)";
 			feedbackText.style.color = "red";
 			feedbackText.style.fontWeight = "bold";
 			penalize(penaltyTime);
