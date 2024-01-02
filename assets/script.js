@@ -31,6 +31,7 @@ let questionArray = [
 	},
 ];
 
+//Variables
 const startBtn = document.getElementById("start-btn"),
 	submitScoreBtn = document.getElementById("submit-score"),
 	highScoresBtn = document.getElementById("high-scores-btn"),
@@ -50,7 +51,7 @@ let highestScores = [],
 	answerDisplayTime,
 	highScore;
 
-// Display quiz description + start button
+// Display quiz description & start button
 function initialQuiz() {
 	console.log("Page reloaded");
 	quizFormat.innerHTML = "Answer all the questions within the time limit.<br><br>" +
