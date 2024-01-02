@@ -276,22 +276,28 @@ function isHighScore(highScore) {
 
 // High score form
 function submitName(event) {
-	event.preventDefault();
+  event.preventDefault();
 
-	// Store and sort scores with user initials
-	if (inputName(highScore)) {
-		let sortedScores = scoreSort();
-		let lowScorerName = sortedScores[sortedScores.length - 1][1];
-		highScoresObj[lowScorerName].sort();
-		highScoresObj[lowScorerName].splice(0, 1);
-		highestScores.shift();
-	}
+  // Store and sort scores with user initials
+  if (inputName(highScore)) {
+    let sortedScores = scoreSort();
+    let lowScorerName = sortedScores[sortedScores.length - 1][1];
+    highScoresObj[lowScorerName].sort();
+    highScoresObj[lowScorerName].splice(0, 1);
+    highestScores.shift();
+  }
 
-	highestScores.push(highScore);
-	localStorage.setItem("highestScoresArray", JSON.stringify(highestScores));
+  highestScores.push(highScore);
+  localStorage.setItem("highestScoresArray", JSON.stringify(highestScores));
 
-	document.getElementsByClassName("name-input-row")[0].style.display = "none";
-	displayHighScores();
+  // Update arrays with latest data from local storage
+  highestScores = JSON.parse(localStorage.getItem("highestScoresArray"));
+  highScoresObj = JSON.parse(localStorage.getItem("storedHighScoreList"));
+
+  document.getElementsByClassName("name-input-row")[0].style.display = "none";
+
+  // Display high scores with the updated data
+  displayHighScores();
 }
 
 // Validate name input
