@@ -46,8 +46,8 @@ body {
 	background-color: whitesmoke;
 }
 
-section {
-	background-color: rgba(255, 255, 255, 0.3);
+#textBox {
+	background-color: rgba(255, 255, 255, 0.4);
 	padding: 20px;
 	border-radius: 12px;
 }
