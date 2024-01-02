@@ -55,10 +55,10 @@ let highestScores = [],
 function initialQuiz() {
 	console.log("Page reloaded");
 	quizFormat.innerHTML = "Answer all the questions within the time limit.<br><br>" +
-	"Choosing an incorrect answer will deduct " +	penaltyTime +	" seconds from your remaining time.<br><br>" +
-	"Your final score will be the amount of time left at the end of the quiz.<br><br>" +
-	"You have one minute to complete the quiz. Answer the quickest to win!<br><br>" +
-	"If you do not finish before the timer runs out, your score will be zero.";
+		"Choosing an incorrect answer will deduct " + penaltyTime + " seconds from your remaining time.<br><br>" +
+		"Your final score will be the amount of time left at the end of the quiz.<br><br>" +
+		"You have one minute to complete the quiz. Answer the quickest to win!<br><br>" +
+		"If you do not finish before the timer runs out, your score will be zero.";
 	quizFormat.style.marginTop = "20px";
 	quizFormat.style.marginBottom = "20px";
 
@@ -330,36 +330,36 @@ function displayHighScores() {
 
 	// Retrieve sorted scores
 	let sortedScores = scoreSort();
-	
+
 	// Alternate row background colours
 	let alternateBackground = true;
 
 	// Loop through sorted scores to create and append rows
 	for (let i = 0, j = sortedScores.length; i < j; i++) {
-			let scoreRow = document.createElement("div");
-			
-			// Set class for alternating row background
-			if (alternateBackground) {
-					scoreRow.setAttribute("class", "row high-score-row odd-row");
-					alternateBackground = false;
-			} else {
-					scoreRow.setAttribute("class", "row high-score-row even-row");
-					alternateBackground = true;
-			}
+		let scoreRow = document.createElement("div");
 
-			// Append row to quiz format
-			quizFormat.appendChild(scoreRow);
+		// Set class for alternating row background
+		if (alternateBackground) {
+			scoreRow.setAttribute("class", "row high-score-row odd-row");
+			alternateBackground = false;
+		} else {
+			scoreRow.setAttribute("class", "row high-score-row even-row");
+			alternateBackground = true;
+		}
 
-			// Create and append columns for name and score
-			let nameCol = document.createElement("div");
-			nameCol.setAttribute("class", "col-md-11");
-			nameCol.textContent = sortedScores[i][1];
-			scoreRow.appendChild(nameCol);
+		// Append row to quiz format
+		quizFormat.appendChild(scoreRow);
 
-			let scoreCol = document.createElement("div");
-			scoreCol.setAttribute("class", "col-md-1");
-			scoreCol.textContent = sortedScores[i][0];
-			scoreRow.appendChild(scoreCol);
+		// Create and append columns for name and score
+		let nameCol = document.createElement("div");
+		nameCol.setAttribute("class", "col-md-11");
+		nameCol.textContent = sortedScores[i][1];
+		scoreRow.appendChild(nameCol);
+
+		let scoreCol = document.createElement("div");
+		scoreCol.setAttribute("class", "col-md-1");
+		scoreCol.textContent = sortedScores[i][0];
+		scoreRow.appendChild(scoreCol);
 	}
 }
 // Puts names and high scores into an array
