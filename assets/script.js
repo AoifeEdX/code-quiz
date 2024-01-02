@@ -51,7 +51,7 @@ let highestScores = [],
 	answerDisplayTime,
 	highScore;
 
-// Display quiz description & start button
+// Display quiz description and start button
 function initialQuiz() {
 	console.log("Page reloaded");
 	quizFormat.innerHTML = "Answer all the questions within the time limit.<br><br>" +
@@ -139,7 +139,7 @@ function createLayout(questionObj) {
 	questionPara.setAttribute("class", "question col md-12");
 	quizFormat.appendChild(questionPara);
 
-	// Display answer buttons & text
+	// Display answer buttons and text
 	for (let i = 0; i < numberOfAnswers; i++) {
 		let newRow = document.createElement("div");
 		newRow.setAttribute("class", "row");
@@ -207,7 +207,7 @@ function checkAnswer(event) {
 	}
 }
 
-// Add event listener to high score form & buttons
+// Add event listener to high score form and buttons
 nameInputForm.addEventListener("submit", function (event) {
 	submitName(event);
 });
@@ -258,7 +258,7 @@ function resultScore() {
 		document.getElementsByClassName("name-input-row")[0].style.display = "block";
 	}
 
-	// Display start & high scores buttons
+	// Display start and high scores buttons
 	startBtn.textContent = "Restart Quiz";
 	startBtn.style.display = "inline-block";
 	highScoresBtn.style.display = "inline-block";
