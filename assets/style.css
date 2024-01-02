@@ -1,0 +1,46 @@
+body {
+	background: url('images/bg.gif') center/cover no-repeat;
+}
+
+.wrapper {
+	margin: 80px auto;
+	max-width: 800px;
+	background-color: white;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.answerBtn {
+	margin-top: 10px;
+	background-color: grey;
+}
+
+.answerText {
+	margin-top: 14px;
+}
+
+#answer-bar {
+	visibility: hidden;
+}
+
+#start-btn,
+#high-scores-btn {
+	margin-top: 10px;
+}
+
+#high-scores-btn {
+	display: none;
+}
+
+.name-input-row {
+	display: none;
+}
+
+.even-row {
+	background-color: ghostwhite;
+}
+
+.odd-row {
+	background-color: whitesmoke;
+}
