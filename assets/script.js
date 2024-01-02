@@ -52,7 +52,7 @@ let highestScores = [],
 
 // Display quiz description + start button
 function initialQuiz() {
-	console.log("Page reloaded");
+	console.log("Page has been reloaded");
 	quizFormat.innerHTML = "Answer all the questions within the time limit.<br><br>" +
 	"Choosing an incorrect answer will deduct " +	penaltyTime +	" seconds from your remaining time.<br><br>" +
 	"Your final score will be the amount of time left at the end of the quiz.<br><br>" +
